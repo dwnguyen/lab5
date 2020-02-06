@@ -10,6 +10,13 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
+	$(".link").click(function(){
+		event.preventDefault();
+		var curName = $(this).find("h3").text();
+		console.log(curName);
+		$(this).find("h3").text(anagrammedName(curName));
+
+	});
 }
 
 function anagrammedName(name) {
